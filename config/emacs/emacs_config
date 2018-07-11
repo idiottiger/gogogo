@@ -1,0 +1,55 @@
+(package-initialize)
+
+;;(elpy-enable)
+
+;;(add-to-list 'custom-theme-load-path "~/Config")
+
+(setq redisplay-dont-pause nil)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(toggle-scroll-bar -1)
+
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+
+(setq url-proxy-services
+   '(("no_proxy" . "^\\(localhost\\|10.*\\)")
+     ("http" . "xxx")
+     ("https" . "xxx")))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("617341f1be9e584692e4f01821716a0b6326baaec1749e15d88f6cc11c288ec6" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" default)))
+ '(inhibit-startup-screen t)
+ '(package-selected-packages
+   (quote
+    (rust-mode dracula-theme magit elpy solarized-theme zenburn-theme org))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(global-linum-mode t)
+
+;;;中文与英文字体设置
+;; Setting English Font
+(set-face-attribute
+'default nil :font "Monaco 18")
+;; Chinese Font
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+(set-fontset-font (frame-parameter nil 'font)
+charset
+(font-spec :family "WenQuanYi Micro Hei Mono" :size 22)))
+
+;;;加载主题
+(load-theme 'dracula t)
+(global-set-key "\C-ca" 'org-agenda)
+
+;;;修改这里的org文件列表
+(setq org-agenda-files (list "xxx.org"))
