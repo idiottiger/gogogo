@@ -67,7 +67,7 @@ catch(e){
 }
 ```
 
-
+Let vs var：`let` 声明的变量只在它所在的代码块有效，比如 `for` 循环
 
 
 
@@ -111,6 +111,31 @@ Promise.race[job1,job2].then(...)
 
 Api 定义：[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
+
+
+```javascript
+// 写法一
+f1().then(function () {
+  return f2();
+}).then(f3);
+
+// 写法二
+f1().then(function () {
+  f2();
+  return;
+}).then(f3);
+
+// 写法三
+f1().then(f2())
+  .then(f3);
+
+// 写法四
+f1().then(f2)
+  .then(f3);
+```
+
+
+
 ### 2. async/await
 
 ```javascript
@@ -147,6 +172,38 @@ Together they provide a great framework to write asynchronous code that is easy 
 With `async/await` we rarely need to write `promise.then/catch`, but we still shouldn’t forget that they are based on promises, because sometimes (e.g. in the outermost scope) we have to use these methods. Also `Promise.all` is a nice thing to wait for many tasks simultaneously. 
 
 
+
+### 3. module
+
+>http://imweb.io/topic/582293894067ce9726778be9
+
+export & import
+
+```javascript
+//module js 文件声明导出方法
+
+funtion func(){
+    
+}
+
+//node
+module.exports = {
+    ...
+    ...
+}
+    
+//es 6
+export={
+    
+}
+
+//import 编译时加载
+import * as xxx from ...
+import {xxx, xxx, xxx} from ...
+
+//require 运行时加载
+
+```
 
 
 
