@@ -7,9 +7,10 @@
 //
 
 #ifndef creature_h
+#include "runnable.h"
 #define creature_h
 
-@interface Creature : NSObject
+@interface Creature : NSObject<RunnableDelegate>
 -(void)doLive;
 @end
 

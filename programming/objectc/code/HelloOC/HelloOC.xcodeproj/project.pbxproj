@@ -29,6 +29,7 @@
 		89C8088D216F5376003F868D /* person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = person.h; sourceTree = "<group>"; };
 		89C8088E216F69EF003F868D /* creature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = creature.h; sourceTree = "<group>"; };
 		89C8088F216F6A9B003F868D /* creature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = creature.m; sourceTree = "<group>"; };
+		89C8089121708418003F868D /* runnable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = runnable.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 				89C8088D216F5376003F868D /* person.h */,
 				89C8088E216F69EF003F868D /* creature.h */,
 				89C8088F216F6A9B003F868D /* creature.m */,
+				89C8089121708418003F868D /* runnable.h */,
 			);
 			path = HelloOC;
 			sourceTree = "<group>";
