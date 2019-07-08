@@ -1,5 +1,9 @@
 # javascript 
 
+## 代码
+
+https://thimble.mozilla.org/en-US/user/idiottiger/2409186
+
 ## 基础
 
 null & undefined：转换成数值时，null 为0，undefined 为 NaN
@@ -14,6 +18,8 @@ parseFloat(...)
 ```
 
 对象：
+
+javascript 不是一门真正意义上的面对对象语言
 
 ```javascript
 var obj = {
@@ -40,6 +46,11 @@ delete obj.k
 
 //
 for...in
+    
+//对象
+function Obj_name(obj_args...){
+    ...
+}
 ```
 
 函数：
@@ -49,6 +60,7 @@ function func(s){
     
 }
 
+//匿名函数
 var func = function(s){
     
 };
@@ -68,6 +80,15 @@ catch(e){
 ```
 
 Let vs var：`let` 声明的变量只在它所在的代码块有效，比如 `for` 循环
+
+严格模式：
+
+```javascript
+"use strict"
+//严格模式：
+//1.更安全
+//2.编译器可以找到潜在的问题点
+```
 
 
 
@@ -96,7 +117,7 @@ promise.then(f1(), f2()).catch(f2())
 
 
 
-![promise](/Users/fchan/Project/opensource/gogogo/programming/js/docs/promise.svg)
+![promise](promise.svg)
 
 #### 链式调用：
 

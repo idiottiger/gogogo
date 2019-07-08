@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+
+<title>Vue Test Demo</title>
+
+<body>
+    <div id="vueApp">
+        {{ message }}
+    </div>
+
+    <div id="spanApp">
+        <span v-bind:title="message">
+            Try to Hover me
+        </span>
+        </p>
+        <span v-if="showName">
+            Show Name
+        </span>
+
+        <li v-for="item in todoList">
+            {{item.id}} + "->" +{{item.name}}
+        </li>
+        </br>
+        <button v-on:click="sayHello">
+            Click Me
+        </button>
+
+        <p>{{inputContent}}</p>
+        <input v-model="inputContent">
+    </div>
+
+    <div id="toDoItem">
+        <ol>
+            <todo-item v-for="item in itemList" v-bind:todo="item" v-bind:key="item.id">
+            </todo-item>
+        </ol>
+    </div>
+
+    <script src="./vue-demo.js"></script>
+</body>
+
+</html>
