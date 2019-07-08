@@ -21,6 +21,11 @@ var spanApp = new Vue({
         sayHello: function () {
             alert("hello");
         }
+    },
+    computed: {
+        contentComputed: function(){
+            return this.inputContent.split('').reverse().join('');
+        }
     }
 });
 

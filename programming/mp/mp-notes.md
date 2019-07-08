@@ -38,4 +38,15 @@ https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_11&index=2
 | API密钥        | key       | 交易过程生成签名的密钥，仅保留在商户系统和微信支付后台，不会在网络中传播。商户妥善保管该Key，切勿在网络中传输，不能在其他客户端中存储，保证key不会被泄漏。商户可根据邮件提示登录微信商户平台进行设置。也可按一下路径设置：微信商户平台(pay.weixin.qq.com)-->账户设置-->API安全-->密钥设置 |
 | Appsecret      | secret    | AppSecret是APPID对应的接口密码，用于获取接口调用凭证时使用。 |
 
-### 2. 
+
+
+## 5 开发框架
+
+### wepy 小程序开发框架
+
+#### 5.1 文档
+
+2.0 https://wepyjs.github.io/wepy-docs/2.x/#/
+
+#### 5.2 安装
+

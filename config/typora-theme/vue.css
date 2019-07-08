@@ -665,6 +665,7 @@ table tr td:last-child {
     padding: 2px 0px 0px 4px;
     font-size: 0.9em;
     color: inherit;
+    zoom:50%
 }
 
 .md-tag {
